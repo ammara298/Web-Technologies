@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture 5 - CSS Fundamentals | Web Technologies</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    .internal-text {
+        color: blue !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                WEB TECHNOLOGIES
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#lectures">Lectures</a>
+                <a href="index.html#about">About</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Lecture Hero -->
+    <section class="lecture-hero">
+
+        <div class="lecture-hero-content">
+
+            <p class="lecture-number">
+                LECTURE 05
+            </p>
+
+            <h1>CSS Fundamentals</h1>
+
+            <p>
+                Learn how Cascading Style Sheets are used to
+                style and improve the appearance of web pages.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="lecture-content">
+
+
+        <!-- Introduction -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">01</span>
+                Introduction to CSS
+            </h2>
+
+            <p>
+                CSS stands for Cascading Style Sheets. It is used
+                to control the presentation and appearance of
+                HTML elements on a web page.
+            </p>
+
+            <div class="concept-box">
+
+                <strong>CSS Syntax</strong>
+
+                <p>
+                    A CSS rule consists of a selector and a
+                    declaration block containing one or more
+                    property-value pairs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Types of CSS -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">02</span>
+                Types of CSS
+            </h2>
+
+            <p>
+                CSS can be applied to HTML documents in three
+                main ways.
+            </p>
+
+            <div class="architecture-grid">
+
+                <div class="architecture-item">
+
+                    <h3>Inline CSS</h3>
+
+                    <p>
+                        CSS is written directly inside an HTML
+                        element using the style attribute.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>Internal CSS</h3>
+
+                    <p>
+                        CSS rules are written inside the
+                        &lt;style&gt; element in the HTML document.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>External CSS</h3>
+
+                    <p>
+                        CSS is stored in a separate stylesheet
+                        and connected to HTML using the link element.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <strong>Recommended for multiple pages:</strong>
+
+                <p>
+                    External CSS allows the same stylesheet to
+                    be used across multiple web pages and helps
+                    maintain a consistent design.
+                </p>
+
+            </div>
+<div class="css-types-demo">
+
+    <h3>Practical Comparison of CSS Types</h3>
+
+    <div class="css-method">
+        <h4>1. Inline CSS</h4>
+
+        <p style="color: red; font-size: 20px; font-weight: bold;">
+            This paragraph uses Inline CSS.
+        </p>
+
+        <code>&lt;p style="color: red;"&gt;</code>
+    </div>
+
+
+    <div class="css-method">
+        <h4>2. Internal CSS</h4>
+
+        <p class="internal-text">
+            This paragraph uses Internal CSS.
+        </p>
+
+        <code>.internal-text { color: blue; }</code>
+    </div>
+
+
+    <div class="css-method">
+        <h4>3. External CSS</h4>
+
+        <p class="external-text">
+            This paragraph uses External CSS.
+        </p>
+
+        <code>.external-text { color: green; }</code>
+    </div>
+
+</div>
+        </section>
+
+
+        <!-- CSS Selectors -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">03</span>
+                CSS Selectors
+            </h2>
+
+            <p>
+                Selectors identify the HTML elements that CSS
+                rules should style.
+            </p>
+
+            <div class="architecture-grid">
+
+                <div class="architecture-item">
+
+                    <h3>Element Selector</h3>
+
+                    <p>
+                        Selects HTML elements by their element name.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>Class Selector</h3>
+
+                    <p>
+                        Selects elements using a class attribute.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>ID Selector</h3>
+
+                    <p>
+                        Selects an element using its unique ID.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>Attribute Selector</h3>
+
+                    <p>
+                        Selects elements based on their attributes
+                        and attribute values.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="selector-demo">
+
+    <h3>Practical Example: Basic CSS Selectors</h3>
+
+    <p class="element-demo">
+        Element Selector: This paragraph is styled using an element selector.
+    </p>
+
+    <p class="class-demo">
+        Class Selector: This paragraph is styled using a class selector.
+    </p>
+
+    <p id="id-demo">
+        ID Selector: This paragraph is styled using an ID selector.
+    </p>
+
+    <p title="selector-example">
+        Attribute Selector: This paragraph is styled using an attribute selector.
+    </p>
+
+</div>
+        </section>
+
+
+        <!-- Advanced Selectors -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">04</span>
+                Other CSS Selectors
+            </h2>
+
+            <ul class="topic-list">
+
+                <li>
+                    <strong>Grouping Selector:</strong>
+                    Applies the same style to multiple selectors.
+                </li>
+
+                <li>
+                    <strong>Descendant Selector:</strong>
+                    Selects elements inside another element.
+                </li>
+
+                <li>
+                    <strong>Child Selector:</strong>
+                    Selects direct children of an element.
+                </li>
+
+                <li>
+                    <strong>Adjacent Sibling Selector:</strong>
+                    Selects an element immediately following another element.
+                </li>
+
+                <li>
+                    <strong>General Sibling Selector:</strong>
+                    Selects sibling elements that share the same parent.
+                </li>
+
+                <li>
+                    <strong>Universal Selector:</strong>
+                    Selects all elements on a page.
+                </li>
+
+            </ul>
+
+            <div class="advanced-selector-demo">
+
+    <h3>Practical Example: Advanced CSS Selectors</h3>
+
+    <div class="selector-box">
+
+        <p>Paragraph 1 — Grouping Selector</p>
+
+        <div>
+            <p>Paragraph 2 — Descendant Selector</p>
+            <p>Paragraph 3 — Child Selector</p>
+        </div>
+
+        <p>Paragraph 4 — Adjacent Sibling</p>
+        <p>Paragraph 5 — General Sibling</p>
+
+    </div>
+
+</div>
+
+        </section>
+
+        <!-- Pseudo Classes -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">05</span>
+                Pseudo-Classes and Pseudo-Elements
+            </h2>
+
+            <div class="architecture-grid">
+
+                <div class="architecture-item">
+
+                    <h3>Pseudo-Class</h3>
+
+                    <p>
+                        A pseudo-class is used to select an element
+                        based on a particular state or condition.
+                    </p>
+
+                    <p>
+                        Example: <strong>:hover</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>Pseudo-Element</h3>
+
+                    <p>
+                        A pseudo-element is used to style a specific
+                        part of an element.
+                    </p>
+
+                    <p>
+                        Examples include <strong>::before</strong>
+                        and <strong>::after</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="pseudo-demo">
+
+    <h3>Practical Example</h3>
+
+    <button class="hover-button">
+        Move Your Mouse Over Me
+    </button>
+
+    <p class="pseudo-text">
+        This text demonstrates pseudo-elements.
+    </p>
+
+</div>
+        </section>
+
+
+        <!-- Cascade Specificity Inheritance -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">06</span>
+                Cascade, Specificity and Inheritance
+            </h2>
+
+            <p>
+                CSS uses the cascade to determine which styles
+                should be applied when multiple rules target
+                the same element.
+            </p>
+
+            <ul class="topic-list">
+
+                <li>
+                    <strong>Cascade:</strong>
+                    Determines which CSS rule is applied when
+                    multiple rules conflict.
+                </li>
+
+                <li>
+                    <strong>Specificity:</strong>
+                    Determines the priority of selectors.
+                </li>
+
+                <li>
+                    <strong>Inheritance:</strong>
+                    Allows some CSS properties to be inherited
+                    from a parent element by its child elements.
+                </li>
+
+            </ul>
+
+            <div class="cascade-demo">
+
+    <h3>Practical: Cascade, Specificity & Inheritance</h3>
+
+    <div class="cascade-card inheritance-card">
+        <h4>Inheritance</h4>
+        <p>
+            This paragraph inherits the text color and font size
+            from its parent element.
+        </p>
+        <span>Parent → Child</span>
+    </div>
+
+
+    <div class="cascade-card cascade-card-example">
+        <h4>Cascade</h4>
+        <p>
+            When two rules have the same priority, the later rule
+            is applied.
+        </p>
+        <span>Rule 1 → Rule 2 → Last rule wins</span>
+    </div>
+
+
+    <div class="cascade-card specificity-card">
+        <h4>Specificity</h4>
+        <p class="specificity-class" id="specificity-id">
+            ID selector has higher specificity than a class selector.
+        </p>
+        <span>Element &lt; Class &lt; ID</span>
+    </div>
+
+</div>
+        </section>
+
+
+        <!-- Colors Fonts Text -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">07</span>
+                Colors, Fonts and Text
+            </h2>
+
+            <p>
+                CSS provides different properties for controlling
+                the visual appearance of text and other elements.
+            </p>
+
+            <div class="architecture-grid">
+
+                <div class="architecture-item">
+
+                    <h3>Colors</h3>
+
+                    <p>
+                        Color properties can be used to control
+                        the color of text and backgrounds.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>Fonts</h3>
+
+                    <p>
+                        Font family, font size, font weight and
+                        font style can be controlled using CSS.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <h3>Text</h3>
+
+                    <p>
+                        Text alignment, decoration, transformation,
+                        line height and letter spacing can be styled.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="visual-style-demo">
+
+    <h3>Practical CSS Styling Example</h3>
+
+    <p class="color-demo">
+        This text demonstrates CSS colors.
+    </p>
+
+    <p class="font-demo">
+        This text demonstrates font family, size and weight.
+    </p>
+
+    <p class="text-demo">
+        This text demonstrates alignment, decoration,
+        transformation and letter spacing.
+    </p>
+
+</div>
+        </section>
+
+
+        <!-- Backgrounds -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">08</span>
+                Background Properties
+            </h2>
+
+            <p>
+                CSS background properties are used to control
+                the background appearance of elements.
+            </p>
+
+            <div class="concept-box">
+
+                <strong>Common Background Properties</strong>
+
+                <p>
+                    Background color and background images can
+                    be used to create visually attractive web pages.
+                </p>
+
+            </div>
+<div class="background-demo">
+
+    <h3>Practical Background Example</h3>
+
+    <div class="background-color-example">
+        Background Color Example
+    </div>
+
+    <div class="background-image-example">
+        Background Image Example
+    </div>
+
+</div>
+            
+        </section>
+
+
+        <!-- Key Takeaways -->
+        <section class="content-card">
+
+            <h2>
+                <span class="topic-number">09</span>
+                Key Takeaways
+            </h2>
+
+            <ul class="topic-list">
+
+                <li>
+                    CSS controls the presentation and appearance
+                    of HTML documents.
+                </li>
+
+                <li>
+                    CSS can be applied using inline, internal,
+                    or external styles.
+                </li>
+
+                <li>
+                    Selectors determine which HTML elements
+                    receive CSS styles.
+                </li>
+
+                <li>
+                    Pseudo-classes and pseudo-elements provide
+                    additional styling capabilities.
+                </li>
+
+                <li>
+                    Cascade, specificity and inheritance affect
+                    how CSS rules are applied.
+                </li>
+
+                <li>
+                    CSS can control colors, fonts, text and
+                    backgrounds.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Navigation -->
+        <div class="lecture-navigation">
+
+            <a href="lecture4.html" class="navigation-button">
+                ← Previous Lecture
+            </a>
+
+            <a href="lecture6.html" class="navigation-button">
+                Next Lecture →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Web Technologies | CSC336
+        </p>
+
+        <p>
+            BS Software Engineering | COMSATS University Islamabad, Vehari Campus
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

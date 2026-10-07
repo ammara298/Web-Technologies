@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture 1 | Web Technologies</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                WEB TECHNOLOGIES
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#lectures">Lectures</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Lecture Header -->
+    <main>
+
+        <section class="lecture-hero">
+
+            <div class="lecture-hero-content">
+
+                <p class="course-code">
+                    CSC336 • WEB TECHNOLOGIES
+                </p>
+
+                <span class="lecture-number">
+                    LECTURE 01
+                </span>
+
+                <h1>
+                    Web Technologies Fundamentals
+                </h1>
+
+                <p>
+                    An introduction to the Internet, World Wide Web,
+                    web communication, standards, applications and
+                    web architecture.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Introduction -->
+        <section class="lecture-content">
+
+            <article class="content-card">
+
+                <span class="topic-number">01</span>
+
+                <h2>Internet and World Wide Web</h2>
+
+                <p>
+                    The Internet is a global network of interconnected
+                    computer networks that allows devices to communicate
+                    and exchange information.
+                </p>
+
+                <p>
+                    The World Wide Web is a service that operates over
+                    the Internet and allows users to access interconnected
+                    web pages and resources through web browsers.
+                </p>
+<div class="internet-web-demo">
+
+    <h3>Practical: Internet and World Wide Web</h3>
+
+    <div class="web-flow">
+
+        <div class="flow-step">
+            <strong>1. User</strong>
+            <span>Browser Request</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+            <strong>2. Internet</strong>
+            <span>Data Transfer</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+            <strong>3. Web Server</strong>
+            <span>Processes Request</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+            <strong>4. Web Page</strong>
+            <span>Response to User</span>
+        </div>
+
+    </div>
+
+</div>
+            </article>
+
+
+            <!-- Request Response -->
+            <article class="content-card">
+
+                <span class="topic-number">02</span>
+
+                <h2>Request and Response</h2>
+
+                <p>
+                    Web communication commonly follows a request-response
+                    model. A client, such as a web browser, sends a request
+                    to a web server. The server processes the request and
+                    sends an appropriate response back to the client.
+                </p>
+
+                <div class="concept-box">
+
+                    <strong>Basic Flow</strong>
+
+                    <p>
+                        Client → Request → Web Server → Response → Client
+                    </p>
+
+                </div>
+<div class="request-response-demo">
+
+    <h3>Practical: HTTP Request & Response</h3>
+
+    <div class="request-response-flow">
+
+        <div class="rr-box request-box">
+            <strong>Client / Browser</strong>
+            <span>HTTP Request</span>
+        </div>
+
+        <div class="rr-arrow">→</div>
+
+        <div class="rr-box server-box">
+            <strong>Web Server</strong>
+            <span>Processes Request</span>
+        </div>
+
+        <div class="rr-arrow">→</div>
+
+        <div class="rr-box response-box">
+            <strong>Client / Browser</strong>
+            <span>HTTP Response</span>
+        </div>
+
+    </div>
+
+    <p class="rr-note">
+        The browser sends a request to the server, and the server
+        processes it and sends a response back to the browser.
+    </p>
+
+</div>
+            </article>
+
+
+            <!-- URL URI -->
+            <article class="content-card">
+
+                <span class="topic-number">03</span>
+
+                <h2>URL and URI</h2>
+
+                <p>
+                    A URL (Uniform Resource Locator) identifies the
+                    location of a resource and provides a way to access it.
+                </p>
+
+                <p>
+                    A URI (Uniform Resource Identifier) is used to identify
+                    a resource. A URL is a commonly used type of URI that
+                    also provides information about how to locate the resource.
+                </p>
+
+            </article>
+
+
+            <!-- HTTP -->
+            <article class="content-card">
+
+                <span class="topic-number">04</span>
+
+                <h2>HTTP and HTTPS</h2>
+
+                <p>
+                    HTTP (HyperText Transfer Protocol) is used for
+                    communication between web clients and servers.
+                </p>
+
+                <p>
+                    HTTPS is the secure version of HTTP. It provides
+                    encrypted communication between the client and server.
+                </p>
+<div class="url-http-demo">
+
+    <h3>Practical: URL and HTTP/HTTPS</h3>
+
+    <div class="url-example">
+        <strong>Example URL</strong>
+
+        <p>
+            https://www.example.com/products?id=25
+        </p>
+
+        <div class="url-parts">
+            <span><b>https</b> → Protocol</span>
+            <span><b>www.example.com</b> → Domain</span>
+            <span><b>/products</b> → Path</span>
+            <span><b>?id=25</b> → Query</span>
+        </div>
+    </div>
+
+    <div class="http-comparison">
+
+        <div class="http-card">
+            <h4>HTTP</h4>
+            <p>
+                Transfers web data without encryption.
+            </p>
+        </div>
+
+        <div class="https-card">
+            <h4>HTTPS</h4>
+            <p>
+                Uses encryption to provide a more secure connection.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+            </article>
+
+
+            <!-- DNS -->
+            <article class="content-card">
+
+                <span class="topic-number">05</span>
+
+                <h2>Domain Name System (DNS)</h2>
+
+                <p>
+                    DNS translates human-readable domain names into
+                    IP addresses that computers can use to locate servers.
+                </p>
+
+                <div class="concept-box">
+
+                    <strong>Example</strong>
+
+                    <p>
+                        Domain Name → DNS → IP Address → Web Server
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Hosting -->
+            <article class="content-card">
+
+                <span class="topic-number">06</span>
+
+                <h2>Web Hosting</h2>
+
+                <p>
+                    Web hosting provides the resources and infrastructure
+                    required to make a website available on the Internet.
+                    Website files are stored on a server so users can
+                    access them through the Web.
+                </p>
+
+            </article>
+
+
+            <!-- Standards -->
+            <article class="content-card">
+
+                <span class="topic-number">07</span>
+
+                <h2>Web Standards and Organizations</h2>
+
+                <p>
+                    Web technologies are developed and maintained through
+                    standards and specifications created by different
+                    organizations.
+                </p>
+
+                <ul class="topic-list">
+
+                    <li>W3C — World Wide Web Consortium</li>
+
+                    <li>WHATWG — Web Hypertext Application Technology Working Group</li>
+
+                    <li>ECMA — develops standards including ECMAScript</li>
+
+                    <li>IETF — develops Internet standards and protocols</li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- Applications -->
+            <article class="content-card">
+
+                <span class="topic-number">08</span>
+
+                <h2>Types of Web Applications</h2>
+
+                <p>
+                    Web applications can be categorized according to
+                    how their content is generated and delivered.
+                </p>
+
+                <ul class="topic-list">
+
+                    <li>
+                        <strong>Static Web Application:</strong>
+                        Content is generally fixed and delivered as stored.
+                    </li>
+
+                    <li>
+                        <strong>Dynamic Web Application:</strong>
+                        Content can be generated or changed according to
+                        data and user interaction.
+                    </li>
+
+                    <li>
+                        <strong>MPA:</strong>
+                        Multi-Page Application where different pages are
+                        loaded during navigation.
+                    </li>
+
+                    <li>
+                        <strong>SPA:</strong>
+                        Single-Page Application where the application
+                        updates content without loading a completely
+                        new page for every interaction.
+                    </li>
+
+                    <li>
+                        <strong>PWA:</strong>
+                        Progressive Web Application combining web
+                        technologies with app-like capabilities.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- Architecture -->
+            <article class="content-card">
+
+                <span class="topic-number">09</span>
+
+                <h2>Web Application Architecture</h2>
+
+                <p>
+                    Architecture describes how the different parts of
+                    a web application are organized and communicate
+                    with each other.
+                </p>
+
+                <div class="architecture-grid">
+
+                    <div class="architecture-item">
+                        <h3>One-Tier</h3>
+                        <p>
+                            Components operate within a single layer.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>Two-Tier</h3>
+                        <p>
+                            The client communicates directly with
+                            a server or data layer.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>Three-Tier</h3>
+                        <p>
+                            Presentation, application logic and
+                            data are separated into different layers.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>N-Tier</h3>
+                        <p>
+                            The application is divided into multiple
+                            logical or physical layers.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Key Takeaways -->
+            <article class="content-card highlight-card">
+
+                <h2>Key Takeaways</h2>
+
+                <ul class="topic-list">
+
+                    <li>The Internet and Web are related but different concepts.</li>
+
+                    <li>Web communication commonly follows a request-response model.</li>
+
+                    <li>URLs and URIs are used to identify web resources.</li>
+
+                    <li>HTTP and HTTPS support communication between clients and servers.</li>
+
+                    <li>DNS helps translate domain names into IP addresses.</li>
+
+                    <li>Web applications can use different application types and architectures.</li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- Lecture Navigation -->
+        <section class="lecture-navigation">
+
+            <a href="index.html" class="navigation-button">
+                ← Back to Lectures
+            </a>
+
+            <a href="lecture2.html" class="navigation-button">
+                Next Lecture →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Web Technologies | CSC336
+        </p>
+
+        <p>
+            BS Software Engineering • COMSATS University Islamabad, Vehari Campus
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

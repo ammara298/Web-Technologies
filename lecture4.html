@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture 4 | Web Technologies</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                WEB TECHNOLOGIES
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#lectures">Lectures</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Lecture Header -->
+        <section class="lecture-hero">
+
+            <div class="lecture-hero-content">
+
+                <p class="course-code">
+                    CSC336 • WEB TECHNOLOGIES
+                </p>
+
+                <span class="lecture-number">
+                    LECTURE 04
+                </span>
+
+                <h1>
+                    HTML5, Semantic Elements & Forms
+                </h1>
+
+                <p>
+                    Exploring HTML5 features, semantic structure,
+                    responsive design, forms, validation and accessibility.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Lecture Content -->
+        <section class="lecture-content">
+
+
+            <!-- HTML5 -->
+            <article class="content-card">
+
+                <span class="topic-number">01</span>
+
+                <h2>HTML5</h2>
+
+                <p>
+                    HTML5 introduced new elements, attributes and
+                    features that support modern web development.
+                    It also provides improved support for multimedia
+                    and structured web content.
+                </p>
+
+                <div class="concept-box">
+
+                    <strong>HTML5 Features</strong>
+
+                    <p>
+                        Semantic elements • Audio • Video • Canvas •
+                        Modern form controls
+                    </p>
+
+                </div>
+<div class="html5-demo">
+
+    <h3>Practical HTML5 Features</h3>
+
+    <div class="html5-feature">
+        <strong>Semantic Elements</strong>
+        <span>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;</span>
+    </div>
+
+    <div class="html5-feature">
+        <strong>Multimedia</strong>
+        <span>&lt;audio&gt; and &lt;video&gt;</span>
+    </div>
+
+    <div class="html5-feature">
+        <strong>Modern Forms</strong>
+        <span>Email, date and number input types</span>
+    </div>
+
+</div>
+            </article>
+
+
+            <!-- Semantic Elements -->
+            <article class="content-card">
+
+                <span class="topic-number">02</span>
+
+                <h2>Semantic HTML Elements</h2>
+
+                <p>
+                    Semantic elements describe the purpose of the
+                    content they contain. They make the structure of
+                    a webpage easier for developers, browsers and
+                    assistive technologies to understand.
+                </p>
+
+                <div class="architecture-grid">
+
+                    <div class="architecture-item">
+                        <h3>&lt;header&gt;</h3>
+                        <p>
+                            Represents introductory or navigational
+                            content for a page or section.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>&lt;nav&gt;</h3>
+                        <p>
+                            Contains navigation links.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>&lt;main&gt;</h3>
+                        <p>
+                            Represents the main content of the document.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>&lt;section&gt;</h3>
+                        <p>
+                            Represents a thematic section of content.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>&lt;article&gt;</h3>
+                        <p>
+                            Represents an independent piece of content.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>&lt;aside&gt;</h3>
+                        <p>
+                            Represents related or secondary content.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>&lt;footer&gt;</h3>
+                        <p>
+                            Represents footer information for a page
+                            or section.
+                        </p>
+                    </div>
+
+                </div>
+<div class="semantic-demo">
+
+    <h3>Practical Semantic HTML Structure</h3>
+
+    <div class="semantic-layout">
+
+        <div class="semantic-part semantic-header">
+            &lt;header&gt;
+        </div>
+
+        <div class="semantic-part semantic-nav">
+            &lt;nav&gt;
+        </div>
+
+        <div class="semantic-content">
+
+            <div class="semantic-part semantic-main">
+                &lt;main&gt;
+            </div>
+
+            <div class="semantic-part semantic-aside">
+                &lt;aside&gt;
+            </div>
+
+        </div>
+
+        <div class="semantic-part semantic-section">
+            &lt;section&gt;
+        </div>
+
+        <div class="semantic-part semantic-article">
+            &lt;article&gt;
+        </div>
+
+        <div class="semantic-part semantic-footer">
+            &lt;footer&gt;
+        </div>
+
+    </div>
+
+</div>
+            </article>
+
+
+            <!-- Responsive Design -->
+            <article class="content-card">
+
+                <span class="topic-number">03</span>
+
+                <h2>Responsive Web Design</h2>
+
+                <p>
+                    Responsive design allows a website to adapt its
+                    layout and content to different screen sizes and
+                    devices.
+                </p>
+
+                <div class="concept-box">
+
+                    <strong>Viewport</strong>
+
+                    <p>
+                        The viewport setting helps browsers control
+                        the dimensions and scaling of a webpage on
+                        different devices.
+                    </p>
+
+                </div>
+<div class="responsive-demo">
+
+    <h3>Practical Responsive Layout</h3>
+
+    <div class="responsive-container">
+
+        <div class="responsive-card">
+            <strong>Large Screen</strong>
+            <p>Cards appear side by side.</p>
+        </div>
+
+        <div class="responsive-card">
+            <strong>Small Screen</strong>
+            <p>Cards adjust into a vertical layout.</p>
+        </div>
+
+    </div>
+
+    <p class="responsive-note">
+        Resize the browser window to see the layout adapt.
+    </p>
+
+</div>
+            </article>
+
+
+            <!-- Multimedia -->
+            <article class="content-card">
+
+                <span class="topic-number">04</span>
+
+                <h2>HTML5 Multimedia</h2>
+
+                <p>
+                    HTML5 provides native elements for multimedia
+                    content without requiring additional browser
+                    plugins.
+                </p>
+
+                <ul class="topic-list">
+
+    <li>
+        <strong>Audio:</strong>
+        Used to embed audio content.
+
+        <audio controls>
+            <source src="media/demo_audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </li>
+
+    <li>
+        <strong>Video:</strong>
+        Used to embed video content.
+
+        <video controls width="100%" style="max-width: 700px;">
+            <source src="media/demo_video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </li>
+
+    <li>
+        <strong>Canvas:</strong>
+        Provides an area where graphics can be
+        rendered using scripts.
+    </li>
+
+</ul>
+            </article>
+
+
+            <!-- Forms -->
+            <article class="content-card">
+
+                <span class="topic-number">05</span>
+
+                <h2>HTML Forms</h2>
+
+                <p>
+                    Forms allow users to enter and submit information.
+                    They are commonly used for registration, login,
+                    search and other interactive features.
+                </p>
+
+                <div class="concept-box">
+
+                    <strong>Important Form Attributes</strong>
+
+                    <p>
+                        action → specifies where form data is sent
+                        <br>
+                        method → specifies how the data is submitted
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Form Controls -->
+            <article class="content-card">
+
+                <span class="topic-number">06</span>
+
+                <h2>Form Controls</h2>
+
+                <p>
+                    HTML provides different controls for collecting
+                    different types of user input.
+                </p>
+
+                <ul class="topic-list">
+
+                    <li>Text input</li>
+                    <li>Email input</li>
+                    <li>Password input</li>
+                    <li>Number input</li>
+                    <li>Date input</li>
+                    <li>Select/drop-down list</li>
+                    <li>Textarea</li>
+                    <li>Buttons</li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- Validation -->
+            <article class="content-card">
+
+                <span class="topic-number">07</span>
+
+                <h2>HTML5 Form Validation</h2>
+
+                <p>
+                    HTML5 provides built-in client-side validation
+                    features that can help ensure that users enter
+                    appropriate information before a form is submitted.
+                </p>
+
+                <div class="architecture-grid">
+
+                    <div class="architecture-item">
+                        <h3>required</h3>
+                        <p>
+                            Specifies that a field must contain a value.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>pattern</h3>
+                        <p>
+                            Allows a value to be checked against
+                            a specified pattern.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>min</h3>
+                        <p>
+                            Defines a minimum permitted value.
+                        </p>
+                    </div>
+
+                    <div class="architecture-item">
+                        <h3>max</h3>
+                        <p>
+                            Defines a maximum permitted value.
+                        </p>
+                    </div>
+
+                </div>
+[4:38 pm, 03/10/2026] amara: }
+[4:40 pm, 03/10/2026] amara: <div class="validation-demo">
+
+    <h3>Practical HTML5 Validation</h3>
+
+    <form action="#" method="post">
+
+        <label for="username">
+            Username
+        </label>
+
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter 3–12 letters"
+            pattern="[A-Za-z]{3,12}"
+            required
+        >
+
+        <label for="score">
+            Score (0–100)
+        </label>
+
+        <input
+            type="number"
+            id="score"
+            name="score"
+            min="0"
+            max="100"
+            placeholder="Enter score"
+            required
+        >
+
+        <button type="submit">
+            Test Validation
+        </button>
+
+    </form>
+
+    <p class="validation-note">
+        Try submitting empty or invalid values to see
+        the browser's built-in validation.
+    </p>
+
+</div>
+            </article>
+
+
+            <!-- Accessibility -->
+            <article class="content-card">
+
+                <span class="topic-number">08</span>
+
+                <h2>Accessibility</h2>
+
+                <p>
+                    Accessible web pages are designed so that people
+                    with different abilities can use and understand
+                    the content.
+                </p>
+
+                <ul class="topic-list">
+
+                    <li>
+                        Use clear labels for form controls.
+                    </li>
+
+                    <li>
+                        Provide meaningful alternative text for images.
+                    </li>
+
+                    <li>
+                        Use fieldset and legend where appropriate
+                        for related form controls.
+                    </li>
+
+                    <li>
+                        Provide clear feedback to users.
+                    </li>
+
+                </ul>
+<div class="accessibility-demo">
+
+    <h3>Practical Accessibility Example</h3>
+
+    <fieldset>
+
+        <legend>Contact Preferences</legend>
+
+        <label>
+            <input
+                type="radio"
+                name="contact"
+                value="email"
+            >
+            Email
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="contact"
+                value="phone"
+            >
+            Phone
+        </label>
+
+    </fieldset>
+
+    <p class="accessibility-note">
+        Labels and legends help users understand and
+        interact with form controls.
+    </p>
+
+</div>
+            </article>
+
+
+            <!-- Client vs Server -->
+            <article class="content-card">
+
+                <span class="topic-number">09</span>
+
+                <h2>Client-Side and Server-Side Validation</h2>
+
+                <div class="architecture-grid">
+
+                    <div class="architecture-item">
+
+                        <h3>Client-Side Validation</h3>
+
+                        <p>
+                            Validation takes place in the user's
+                            browser before information is sent
+                            to the server.
+                        </p>
+
+                    </div>
+
+                    <div class="architecture-item">
+
+                        <h3>Server-Side Validation</h3>
+
+                        <p>
+                            Validation takes place on the server
+                            after the submitted data is received.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Example Form -->
+            <article class="content-card">
+
+                <span class="topic-number">10</span>
+
+                <h2>Example HTML5 Form</h2>
+
+                <p>
+                    The following form demonstrates several HTML5
+                    form controls and validation attributes.
+                </p>
+
+                <form action="#" method="post">
+
+                    <label for="student-name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="student-name"
+                        name="student-name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label for="student-email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="student-email"
+                        name="student-email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <label for="topic">
+                        Favorite Topic
+                    </label>
+
+                    <select id="topic" name="topic">
+
+                        <option value="">
+                            Select a topic
+                        </option>
+
+                        <option value="html">
+                            HTML
+                        </option>
+
+                        <option value="css">
+                            CSS
+                        </option>
+
+                        <option value="web">
+                            Web Technologies
+                        </option>
+
+                    </select>
+
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Submit
+                    </button>
+
+                </form>
+
+            </article>
+
+
+            <!-- Key Takeaways -->
+            <article class="content-card highlight-card">
+
+                <h2>Key Takeaways</h2>
+
+                <ul class="topic-list">
+
+                    <li>
+                        HTML5 provides modern elements and features.
+                    </li>
+
+                    <li>
+                        Semantic elements improve the structure and
+                        meaning of web content.
+                    </li>
+
+                    <li>
+                        Responsive design helps websites work across
+                        different screen sizes.
+                    </li>
+
+                    <li>
+                        Forms collect information from users.
+                    </li>
+
+                    <li>
+                        HTML5 provides built-in validation features.
+                    </li>
+
+                    <li>
+                        Accessibility should be considered when
+                        designing web pages and forms.
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- Navigation -->
+        <section class="lecture-navigation">
+
+            <a href="lecture3.html" class="navigation-button">
+                ← Previous Lecture
+            </a>
+
+            <a href="lecture5.html" class="navigation-button">
+                Next Lecture →
+            </a>
+
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Web Technologies | CSC336
+        </p>
+
+        <p>
+            BS Software Engineering • COMSATS University Islamabad, Vehari Campus
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

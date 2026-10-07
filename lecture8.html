@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 8 - Advanced CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">WEB TECHNOLOGIES</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#lectures">Lectures</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </div>
+</nav>
+
+
+<header class="lecture-hero">
+    <div class="lecture-hero-content">
+        <span class="lecture-number">LECTURE 08</span>
+        <h1>Advanced CSS Techniques</h1>
+        <p>
+            Web fonts, icon fonts, CSS custom properties, media queries,
+            feature queries and cross-browser compatibility.
+        </p>
+    </div>
+</header>
+
+
+<main class="lecture-container">
+
+
+<!-- ================= TOPIC 01 ================= -->
+
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">01</span>
+        <div>
+            <h2>Web Fonts</h2>
+            <p>
+                Web fonts allow websites to use consistent typography
+                across different devices.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture8-practical">
+
+        <div class="practical-title">
+            <span>Practical Example</span>
+            <h3>Font Family & Fallbacks</h3>
+        </div>
+
+        <div class="font-demo">
+            <h3>Campus Web Technologies</h3>
+            <p>
+                This heading demonstrates custom font styling with
+                sensible fallback fonts.
+            </p>
+
+            <code>
+                font-family: Georgia, Arial, sans-serif;
+            </code>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOPIC 02 ================= -->
+
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">02</span>
+        <div>
+            <h2>Icon Fonts</h2>
+            <p>
+                Icon fonts represent symbols as scalable font glyphs
+                that can be styled using CSS.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture8-practical">
+
+        <div class="practical-title">
+            <span>UI Example</span>
+            <h3>Icon Style Navigation</h3>
+        </div>
+
+        <div class="icon-demo">
+            <div>
+                <span class="fake-icon">⌂</span>
+                <strong>Home</strong>
+            </div>
+
+            <div>
+                <span class="fake-icon">⌕</span>
+                <strong>Search</strong>
+            </div>
+
+            <div>
+                <span class="fake-icon">☰</span>
+                <strong>Menu</strong>
+            </div>
+
+            <div>
+                <span class="fake-icon">↓</span>
+                <strong>Download</strong>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOPIC 03 ================= -->
+
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">03</span>
+        <div>
+            <h2>CSS Custom Properties</h2>
+            <p>
+                CSS variables make repeated design values easier to
+                maintain and reuse.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture8-practical">
+
+        <div class="practical-title">
+            <span>CSS Variables</span>
+            <h3>Reusable Design Tokens</h3>
+        </div>
+
+        <div class="variable-demo">
+
+            <div class="variable-card">
+                <span class="color-dot brand"></span>
+                <strong>--brand</strong>
+                <small>Primary color</small>
+            </div>
+
+            <div class="variable-card">
+                <span class="color-dot surface"></span>
+                <strong>--surface</strong>
+                <small>Background</small>
+            </div>
+
+            <div class="variable-card">
+                <span class="color-dot radius"></span>
+                <strong>--radius</strong>
+                <small>Corner size</small>
+            </div>
+
+        </div>
+
+        <div class="code-box">
+<pre>:root {
+  --brand: #0284c7;
+  --surface: #ffffff;
+  --radius: 12px;
+}
+
+.card {
+  color: var(--brand);
+  background: var(--surface);
+  border-radius: var(--radius);
+}</pre>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOPIC 04 ================= -->
+
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">04</span>
+        <div>
+            <h2>Media Queries</h2>
+            <p>
+                Media queries apply CSS according to conditions such as
+                viewport width and orientation.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture8-practical">
+
+        <div class="practical-title">
+            <span>Responsive Design</span>
+            <h3>Responsive Cards</h3>
+            <p>Resize the browser window to see the layout change.</p>
+        </div>
+
+        <div class="media-demo">
+
+            <div class="media-card">
+                <strong>Desktop</strong>
+                <span>Cards appear in multiple columns.</span>
+            </div>
+
+            <div class="media-card">
+                <strong>Tablet</strong>
+                <span>Columns adjust according to screen width.</span>
+            </div>
+
+            <div class="media-card">
+                <strong>Mobile</strong>
+                <span>Cards move into a single column.</span>
+            </div>
+
+        </div>
+
+        <div class="code-box">
+<pre>@media (max-width: 768px) {
+    .media-demo {
+        grid-template-columns: 1fr;
+    }
+}</pre>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOPIC 05 ================= -->
+
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">05</span>
+        <div>
+            <h2>Feature Queries & @supports</h2>
+            <p>
+                @supports checks whether a browser understands a CSS feature
+                before applying enhanced styling.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture8-practical">
+
+        <div class="practical-title">
+            <span>Progressive Enhancement</span>
+            <h3>Flexbox Fallback + Grid</h3>
+        </div>
+
+        <div class="supports-demo">
+
+            <div class="supports-card">
+                <span>FALLBACK</span>
+                <h4>Flexbox</h4>
+                <p>
+                    A usable layout remains available as the fallback.
+                </p>
+            </div>
+
+            <div class="supports-arrow">→</div>
+
+            <div class="supports-card enhanced">
+                <span>ENHANCED</span>
+                <h4>CSS Grid</h4>
+                <p>
+                    Grid can be used when the browser supports it.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="code-box">
+<pre>.layout {
+    display: flex;
+}
+
+@supports (display: grid) {
+    .layout {
+        display: grid;
+    }
+}</pre>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOPIC 06 ================= -->
+
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">06</span>
+        <div>
+            <h2>Cross-Browser Compatibility</h2>
+            <p>
+                Websites should remain usable across different browsers
+                and devices.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture8-practical">
+
+        <div class="practical-title">
+            <span>Compatibility Checklist</span>
+            <h3>Before Deployment</h3>
+        </div>
+
+        <div class="compatibility-grid">
+
+            <div>
+                <span class="check">✓</span>
+                <strong>Standard CSS</strong>
+                <p>Prefer current standards-based CSS.</p>
+            </div>
+
+            <div>
+                <span class="check">✓</span>
+                <strong>Fallbacks</strong>
+                <p>Provide alternatives for unsupported features.</p>
+            </div>
+
+            <div>
+                <span class="check">✓</span>
+                <strong>Browser Testing</strong>
+                <p>Check Chrome, Edge, Firefox and Safari.</p>
+            </div>
+
+            <div>
+                <span class="check">✓</span>
+                <strong>Responsive Testing</strong>
+                <p>Test desktop, tablet and mobile layouts.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SUMMARY ================= -->
+
+<section class="takeaways">
+
+    <div class="takeaways-header">
+        <span>SUMMARY</span>
+        <h2>Key Takeaways</h2>
+    </div>
+
+    <div class="takeaways-grid">
+
+        <div>
+            <strong>01</strong>
+            <p>Web fonts provide consistent typography.</p>
+        </div>
+
+        <div>
+            <strong>02</strong>
+            <p>Icon fonts provide scalable interface symbols.</p>
+        </div>
+
+        <div>
+            <strong>03</strong>
+            <p>Custom properties make CSS values reusable.</p>
+        </div>
+
+        <div>
+            <strong>04</strong>
+            <p>Media queries create responsive layouts.</p>
+        </div>
+
+        <div>
+            <strong>05</strong>
+            <p>@supports enables progressive enhancement.</p>
+        </div>
+
+        <div>
+            <strong>06</strong>
+            <p>Fallbacks and browser testing improve compatibility.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="lecture-navigation">
+
+    <a href="lecture7.html" class="nav-button">
+        ← Previous Lecture
+    </a>
+
+    <a href="index.html" class="nav-button primary">
+        Back to Home →
+    </a>
+
+</div>
+
+</main>
+
+
+<footer class="footer">
+    <p>© 2026 Web Technologies | BS Software Engineering</p>
+</footer>
+
+</body>
+</html>

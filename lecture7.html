@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 7 - CSS Positioning & Effects</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">WEB TECHNOLOGIES</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#lectures">Lectures</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<header class="lecture-hero">
+    <div class="lecture-hero-content">
+
+        <span class="lecture-number">LECTURE 07</span>
+
+        <h1>CSS Positioning, Effects & Animation</h1>
+
+        <p>
+            Learn how CSS positioning, stacking, floats, borders, gradients,
+            transforms, transitions and animations can improve web page design.
+        </p>
+
+    </div>
+</header>
+
+
+<main class="lecture-container">
+
+
+<!-- =====================================================
+     TOPIC 01 - POSITIONING
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">01</span>
+
+        <div>
+            <h2>CSS Positioning</h2>
+            <p>
+                Positioning controls how elements are placed on a web page.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical positioning-practical">
+
+        <div class="practical-title">
+            <span>Practical Example</span>
+            <h3>Positioning Playground</h3>
+            <p>
+                Compare static, relative and absolute positioning.
+            </p>
+        </div>
+
+        <div class="positioning-grid">
+
+            <!-- Static -->
+            <div class="position-card">
+
+                <div class="demo-label static-label">
+                    NORMAL FLOW
+                </div>
+
+                <h4>Static Position</h4>
+
+                <div class="position-demo static-demo">
+                    <span>Static Element</span>
+                </div>
+
+                <p>
+                    The element stays in the normal document flow.
+                </p>
+
+            </div>
+
+
+            <!-- Relative -->
+            <div class="position-card">
+
+                <div class="demo-label relative-label">
+                    OFFSET
+                </div>
+
+                <h4>Relative Position</h4>
+
+                <div class="position-demo relative-demo">
+                    <span>Relative Element</span>
+                </div>
+
+                <p>
+                    The element remains in the flow but can be shifted
+                    using top, right, bottom or left.
+                </p>
+
+            </div>
+
+
+            <!-- Absolute -->
+            <div class="position-card">
+
+                <div class="demo-label absolute-label">
+                    ANCHORED
+                </div>
+
+                <h4>Absolute Position</h4>
+
+                <div class="absolute-demo-parent">
+                    <div class="absolute-demo-child">
+                        Absolute
+                    </div>
+                </div>
+
+                <p>
+                    The element is positioned relative to its containing block.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 02 - FIXED & STICKY
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">02</span>
+
+        <div>
+            <h2>Fixed & Sticky Positioning</h2>
+            <p>
+                Fixed elements stay attached to the viewport while sticky
+                elements respond to scrolling within their container.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical sticky-practical">
+
+        <div class="practical-title">
+            <span>Interactive Demo</span>
+            <h3>Sticky Navigation Preview</h3>
+            <p>
+                Scroll inside the preview area to see the sticky heading.
+            </p>
+        </div>
+
+        <div class="sticky-layout">
+
+            <div class="sticky-preview">
+
+                <div class="sticky-header">
+                    <span>STICKY HEADER</span>
+                    <small>top: 0</small>
+                </div>
+
+                <div class="sticky-content">
+
+                    <div class="mini-line"></div>
+                    <div class="mini-line short"></div>
+
+                    <p>
+                        Sticky elements behave like normally positioned
+                        elements until a scroll threshold is reached.
+                    </p>
+
+                    <div class="mini-card">Content Block 01</div>
+                    <div class="mini-card">Content Block 02</div>
+                    <div class="mini-card">Content Block 03</div>
+                    <div class="mini-card">Content Block 04</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="fixed-info-card">
+
+                <div class="info-icon">F</div>
+
+                <h4>Fixed Position</h4>
+
+                <p>
+                    A fixed element is positioned relative to the viewport
+                    and normally remains in the same place while scrolling.
+                </p>
+
+                <div class="property-chip">
+                    position: fixed;
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 03 - Z INDEX
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">03</span>
+
+        <div>
+            <h2>z-index & Stacking Contexts</h2>
+            <p>
+                z-index controls the stacking order of positioned elements.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical zindex-practical">
+
+        <div class="practical-title">
+            <span>Visual Demonstration</span>
+            <h3>Layered Elements</h3>
+            <p>
+                Higher stacking values appear above lower stacking values.
+            </p>
+        </div>
+
+        <div class="zindex-layout">
+
+            <div class="zindex-stage">
+
+                <div class="layer-card layer-one">
+                    <strong>z-index: 1</strong>
+                    <span>Back Layer</span>
+                </div>
+
+                <div class="layer-card layer-five">
+                    <strong>z-index: 5</strong>
+                    <span>Middle Layer</span>
+                </div>
+
+                <div class="layer-card layer-ten">
+                    <strong>z-index: 10</strong>
+                    <span>Top Layer</span>
+                </div>
+
+            </div>
+
+
+            <div class="stack-info">
+
+                <div class="stack-row">
+                    <span class="stack-dot one"></span>
+                    <div>
+                        <strong>z-index: 1</strong>
+                        <small>Lowest visible layer</small>
+                    </div>
+                </div>
+
+                <div class="stack-row">
+                    <span class="stack-dot five"></span>
+                    <div>
+                        <strong>z-index: 5</strong>
+                        <small>Middle layer</small>
+                    </div>
+                </div>
+
+                <div class="stack-row">
+                    <span class="stack-dot ten"></span>
+                    <div>
+                        <strong>z-index: 10</strong>
+                        <small>Highest layer</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 04 - FLOATS
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">04</span>
+
+        <div>
+            <h2>CSS Floats & Clearing</h2>
+            <p>
+                Floats can move elements to the left or right and allow
+                surrounding content to flow around them.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical float-practical">
+
+        <div class="practical-title">
+            <span>Layout Example</span>
+            <h3>Article with Floating Image</h3>
+            <p>
+                The text wraps around the floated element.
+            </p>
+        </div>
+
+        <article class="float-article clearfix">
+
+            <div class="float-image">
+                WEB
+            </div>
+
+            <div class="article-content">
+
+                <span class="article-tag">CSS FLOAT</span>
+
+                <h4>Understanding Float Layouts</h4>
+
+                <p>
+                    CSS float allows an element to move toward the left or
+                    right side of its containing block. Other content can
+                    flow around the floated element.
+                </p>
+
+                <p>
+                    Clearing can be used when following content should move
+                    below the floated element instead of wrapping around it.
+                </p>
+
+            </div>
+
+        </article>
+
+        <div class="clear-note">
+            <strong>Clear / Clearfix:</strong>
+            Used to control the effect of floating elements on surrounding
+            layout.
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 05 - BORDER RADIUS
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">05</span>
+
+        <div>
+            <h2>Border Radius</h2>
+            <p>
+                Border-radius creates rounded corners, circles and pill-shaped
+                elements.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical radius-practical">
+
+        <div class="practical-title">
+            <span>Design Examples</span>
+            <h3>Rounded Shapes</h3>
+            <p>
+                Different border-radius values create different visual shapes.
+            </p>
+        </div>
+
+        <div class="radius-grid">
+
+            <div class="radius-card">
+                <div class="shape normal-radius"></div>
+                <h4>12px Radius</h4>
+                <span>Rounded corners</span>
+            </div>
+
+            <div class="radius-card">
+                <div class="shape individual-radius"></div>
+                <h4>Individual Corners</h4>
+                <span>Different corner values</span>
+            </div>
+
+            <div class="radius-card">
+                <div class="shape circle-radius"></div>
+                <h4>50% Radius</h4>
+                <span>Circle shape</span>
+            </div>
+
+            <div class="radius-card">
+                <div class="pill-preview">PILL BUTTON</div>
+                <h4>Pill Shape</h4>
+                <span>Large border radius</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 06 - GRADIENTS
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">06</span>
+
+        <div>
+            <h2>CSS Gradients</h2>
+            <p>
+                Gradients create smooth color transitions without using images.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical gradient-practical">
+
+        <div class="practical-title">
+            <span>Color Effects</span>
+            <h3>Gradient Gallery</h3>
+            <p>
+                Examples of linear, radial and multi-color gradients.
+            </p>
+        </div>
+
+        <div class="gradient-grid">
+
+            <div class="gradient-card">
+
+                <div class="gradient-preview linear-gradient-demo">
+                    <span>LINEAR</span>
+                </div>
+
+                <h4>Linear Gradient</h4>
+                <p>Color transition along a straight direction.</p>
+
+            </div>
+
+
+            <div class="gradient-card">
+
+                <div class="gradient-preview radial-gradient-demo">
+                    <span>RADIAL</span>
+                </div>
+
+                <h4>Radial Gradient</h4>
+                <p>Colors spread outward from a central point.</p>
+
+            </div>
+
+
+            <div class="gradient-card">
+
+                <div class="gradient-preview multi-gradient-demo">
+                    <span>MULTI COLOR</span>
+                </div>
+
+                <h4>Multiple Colors</h4>
+                <p>Several colors can be combined into one gradient.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 07 - SHADOWS & OPACITY
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">07</span>
+
+        <div>
+            <h2>Shadows & Opacity</h2>
+            <p>
+                Shadows add depth while opacity controls the transparency
+                of an element.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical shadow-practical">
+
+        <div class="practical-title">
+            <span>Visual Effects</span>
+            <h3>Depth & Transparency</h3>
+            <p>
+                Compare normal, shadowed and transparent elements.
+            </p>
+        </div>
+
+        <div class="shadow-grid">
+
+            <div class="effect-card normal-effect">
+                <div class="effect-icon">01</div>
+                <h4>Normal</h4>
+                <p>No additional shadow effect.</p>
+            </div>
+
+            <div class="effect-card shadow-effect">
+                <div class="effect-icon">02</div>
+                <h4>Box Shadow</h4>
+                <p>A soft shadow creates visual depth.</p>
+            </div>
+
+            <div class="effect-card inset-effect">
+                <div class="effect-icon">03</div>
+                <h4>Inset Shadow</h4>
+                <p>The shadow appears inside the element.</p>
+            </div>
+
+            <div class="effect-card opacity-effect">
+                <div class="effect-icon">04</div>
+                <h4>Opacity</h4>
+                <p>The element becomes partially transparent.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 08 - TRANSFORMS
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">08</span>
+
+        <div>
+            <h2>CSS 2D & 3D Transforms</h2>
+            <p>
+                Transform functions can move, rotate, scale and skew elements.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical transform-practical">
+
+        <div class="practical-title">
+            <span>Transformation Lab</span>
+            <h3>2D Transform Effects</h3>
+            <p>
+                Hover over the cards to see transformation effects.
+            </p>
+        </div>
+
+        <div class="transform-grid">
+
+            <div class="transform-card">
+
+                <div class="transform-stage">
+                    <div class="transform-box translate-box">
+                        MOVE
+                    </div>
+                </div>
+
+                <h4>Translate</h4>
+                <span>Moves an element</span>
+
+            </div>
+
+
+            <div class="transform-card">
+
+                <div class="transform-stage">
+                    <div class="transform-box rotate-box">
+                        ROTATE
+                    </div>
+                </div>
+
+                <h4>Rotate</h4>
+                <span>Rotates an element</span>
+
+            </div>
+
+
+            <div class="transform-card">
+
+                <div class="transform-stage">
+                    <div class="transform-box scale-box">
+                        SCALE
+                    </div>
+                </div>
+
+                <h4>Scale</h4>
+                <span>Changes element size</span>
+
+            </div>
+
+
+            <div class="transform-card">
+
+                <div class="transform-stage">
+                    <div class="transform-box skew-box">
+                        SKEW
+                    </div>
+                </div>
+
+                <h4>Skew</h4>
+                <span>Tilts an element</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="transform-3d">
+
+            <div>
+                <span class="demo-label">3D EFFECT</span>
+                <h4>3D Transform Preview</h4>
+                <p>
+                    Perspective can create a sense of depth for 3D transforms.
+                </p>
+            </div>
+
+            <div class="cube-scene">
+                <div class="cube-card">
+                    3D
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 09 - TRANSITIONS
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">09</span>
+
+        <div>
+            <h2>CSS Transitions</h2>
+            <p>
+                Transitions create smooth changes between CSS property values.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical transition-practical">
+
+        <div class="practical-title">
+            <span>Hover Interaction</span>
+            <h3>Transition Button</h3>
+            <p>
+                Move your cursor over the button to see a smooth transition.
+            </p>
+        </div>
+
+        <div class="transition-demo">
+
+            <button class="transition-button">
+                Hover Me
+                <span>→</span>
+            </button>
+
+            <div class="transition-properties">
+
+                <div>
+                    <strong>Property</strong>
+                    <span>all</span>
+                </div>
+
+                <div>
+                    <strong>Duration</strong>
+                    <span>0.3s</span>
+                </div>
+
+                <div>
+                    <strong>Timing</strong>
+                    <span>ease</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPIC 10 - KEYFRAME ANIMATIONS
+===================================================== -->
+<section class="topic-section">
+
+    <div class="topic-heading">
+        <span class="topic-number">10</span>
+
+        <div>
+            <h2>CSS Keyframe Animations</h2>
+            <p>
+                Keyframes define multiple stages of an animation.
+            </p>
+        </div>
+    </div>
+
+    <div class="lecture7-practical animation-practical">
+
+        <div class="practical-title">
+            <span>Animation Lab</span>
+            <h3>CSS Animation Showcase</h3>
+            <p>
+                These examples demonstrate continuous CSS animations.
+            </p>
+        </div>
+
+        <div class="animation-showcase">
+
+            <div class="animation-card">
+
+                <div class="animation-scene">
+                    <div class="animated-orb"></div>
+                </div>
+
+                <h4>Moving Orb</h4>
+                <p>Uses keyframes to move an element.</p>
+
+            </div>
+
+
+            <div class="anima
